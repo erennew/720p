@@ -17,7 +17,7 @@ class Config(object):
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = get_config("DOWNLOAD_LOCATION", "/app/downloads")
     # Telegram maximum file upload size
-    BOT_USERNAME = get_config("BOT_USERNAME", "Forwardmsgremoverbot")
+    BOT_USERNAME = get_config("BOT_USERNAME", "Encoder720pRBot")
     MAX_FILE_SIZE = 4194304000
     TG_MAX_FILE_SIZE = 4194304000
     FREE_USER_MAX_FILE_SIZE = 4194304000
