@@ -29,6 +29,19 @@ def hbs(size):
         size /= power
         raised_to_pow += 1
     return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
+def TimeFormatter(milliseconds: int) -> str:
+    seconds, milliseconds = divmod(int(milliseconds), 1000)
+    minutes, seconds = divmod(seconds, 60)
+    hours, minutes = divmod(minutes, 60)
+    days, hours = divmod(hours, 24)
+    tmp = (
+        ((str(days) + "d, ") if days else "") +
+        ((str(hours) + "h, ") if hours else "") +
+        ((str(minutes) + "m, ") if minutes else "") +
+        ((str(seconds) + "s, ") if seconds else "") +
+        ((str(milliseconds) + "ms, ") if milliseconds else "")
+    )
+    return tmp[:-2]
 
 async def on_task_complete():
     del data[0]
@@ -42,7 +55,17 @@ async def add_task(message: Message):
     except Exception as e:
         LOGGER.info(e)  
     await on_task_complete()
-
+async def create_temp_file(directory, extension=".mkv"):
+    """Create a guaranteed unique temp file"""
+    temp_count = 0
+    max_attempts = 100
+    while temp_count < max_attempts:
+        temp_name = f"temp_{int(time.time())}_{temp_count}{extension}"
+        temp_path = os.path.join(directory, temp_name)
+        if not os.path.exists(temp_path):
+            return temp_path
+        temp_count += 1
+    raise Exception("Could not create unique temp file after 100 attempts")
 async def sysinfo(e):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     cpu_freq = psutil.cpu_freq()
