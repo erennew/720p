@@ -160,6 +160,7 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
             out_put_file_name
         ]
 
+        # Third try: Minimal conversion
         minimal_command = [
             'ffmpeg',
             '-hide_banner',
@@ -296,6 +297,7 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
             except Exception as e:
                 LOGGER.error(f"Failed to remove temp file {f}: {e}")
 
+# ... [keep the existing media_info and take_screen_shot functions] ...
 
 async def media_info(saved_file_path):
     """Get media duration and bitrate with robust error handling"""
