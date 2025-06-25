@@ -5,8 +5,8 @@ class Config(object):
     SESSION_NAME = get_config("SESSION_NAME", "EncoderX") 
     # EncoderX_bot....
     # sucks Dude
-    APP_ID = int(get_config("APP_ID", "20793620"))
-    API_HASH = get_config("API_HASH", "a712d2b8486f26c4dee5127cc9ae0615")
+    APP_ID = int(get_config("APP_ID", ""))
+    API_HASH = get_config("API_HASH", "")
     LOG_CHANNEL = get_config("LOG_CHANNEL", "logencoder")
     UPDATES_CHANNEL = get_config("UPDATES_CHANNEL", None) # Without `@` LOL
     AUTH_USERS = [1047253913]
