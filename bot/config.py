@@ -7,17 +7,17 @@ class Config(object):
     # sucks Dude
     APP_ID = int(get_config("APP_ID", "22922577"))
     API_HASH = get_config("API_HASH", "ff5513f0b7e10b92a940bd107e1ac32a")
-    LOG_CHANNEL = get_config("LOG_CHANNEL", "logencoder")
+    LOG_CHANNEL = get_config("LOG_CHANNEL", "")
     UPDATES_CHANNEL = get_config("UPDATES_CHANNEL", None) # Without `@` LOL
     AUTH_USERS = [1047253913]
     USER_SESSION = get_config("USER_SESSION","BQAO83IAcjM8qkEXaikoZwkn8iWi94nr29TNTZpbjMI3KPlGAq-0CuA8idOxYur5HgYPIhMr4ayPr9_8Clj3Brk_ye-xq81RpnizkaLyHLGkh83tW3AmWy3Mc_GhuvyIUblf0yaK5Xti2GGT2KezRqKA408kKIUHacBqfY4TCMOeA85ve0bMR5vKHqD3-6wgBezxKnowXyF6KXXIxB4TQZP5PJh5OWp_yi_wX3e4gVnOWL2iseethamavakitloseerimalleychettuMvJQkZMeifgj1R2UtZSRy0sp8uNl1sg8rccU1vbqvroFSACZB2EAAAAABAEDjEA")  
 
 # array , simplest method was AUTH_USERS = [] ; AUTH_USERS.append(your telegram id) 🌹
-    TG_BOT_TOKEN = get_config("TG_BOT_TOKEN", "8102040984:AAEQ9J8FFA_uneRT6cHbkoPMM7u5eItm-0I")
+    TG_BOT_TOKEN = get_config("TG_BOT_TOKEN", "1599848664:AAHPUpWqNCMpWub_ir2RgmlYcRsebT4WQvo")
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = get_config("DOWNLOAD_LOCATION", "/app/downloads")
     # Telegram maximum file upload size
-    BOT_USERNAME = get_config("BOT_USERNAME", "Encoder720pRBot")
+    BOT_USERNAME = get_config("BOT_USERNAME", "Forwardmsgremoverbot")
     MAX_FILE_SIZE = 4194304000
     TG_MAX_FILE_SIZE = 4194304000
     FREE_USER_MAX_FILE_SIZE = 4194304000
