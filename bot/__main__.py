@@ -32,7 +32,7 @@ pyrogram.utils.MIN_CHANNEL_ID = -100999999999999
 
 # Default settings
 crf.append("23")
-codec.append("libx265")
+codec.append("libx264")
 resolution.append("1280x720")
 preset.append("medium")
 audio_b.append("96k")
